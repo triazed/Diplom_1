@@ -11,7 +11,11 @@
 ### Структура проекта
 
 - `praktikum` - пакет, содержащий код программы
-- `tests` - пакет, содержащий тесты, разделенные по классам. Например, `test_bun.py`, `test_burger.py` и т.д.
+- `tests` - пакет, содержащий тесты, разделенные по классам:
+-- test_bun.py - тесты класса Bun
+-- test_burger.py - тесты класса Burger
+-- test_database.py - тесты класса Database
+-- test_ingredient.py - тесты класса Ingredient
 
 ### Запуск автотестов
 
