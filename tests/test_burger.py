@@ -65,8 +65,12 @@ class TestBurger:
         burger = Burger()
         burger.set_buns(mock_bun)
         burger.add_ingredient(mock_ingredient)
-        expected_price = mock_bun.get_price.return_value*2 + mock_ingredient.get_price.return_value
-        expected_results = ["Булка пшеничная", "соус Министерский", str(expected_price)]
+        expected_receipt = (
+            f'(==== Булка пшеничная ====)'
+            f'\n= соус Министерский ='
+            f'\n(==== Булка пшеничная ====)'
+            f'\n'
+            f'\nPrice: 255.9'
+        )
         actual_receipt = burger.get_receipt()
-        for i in expected_results:
-            assert i in actual_receipt
+        assert actual_receipt == expected_receipt
