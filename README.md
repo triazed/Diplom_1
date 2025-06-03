@@ -11,7 +11,12 @@
 ### Структура проекта
 
 - `praktikum` - пакет, содержащий код программы
-- `tests` - пакет, содержащий тесты, разделенные по классам. Например, `bun_test.py`, `burger_test.py` и т.д.
+- `data` - пакет, содержащий тестовые данные
+- `tests` - пакет, содержащий тесты, разделенные по классам:
+-- test_bun.py - тесты класса Bun
+-- test_burger.py - тесты класса Burger
+-- test_database.py - тесты класса Database
+-- test_ingredient.py - тесты класса Ingredient
 
 ### Запуск автотестов
 
@@ -21,4 +26,4 @@
 
 **Запуск автотестов и создание HTML-отчета о покрытии**
 
->  `$ pytest --cov=praktikum --cov-report=html`
+>  `$ pytest --cov=bun --cov=burger --cov=ingredient --cov=database --cov-branch --cov-report=html`
